@@ -76,6 +76,8 @@ Pour des machines de prod, on peut utiliser le "--pretty" et le "--static". Cela
 
 ### Gestion du réseaux
 
+#### NetworkManager (Beurk :'( )
+
 * Pour affiché les infos DHCP récupéré par le NetworkManager sur une interface disposant d'un DHCP est la suivante :
 
 ```
