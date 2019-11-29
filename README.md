@@ -30,14 +30,15 @@ On remarque alors la ligne de PID 1 avec comme utilisateur "root" et processus "
 * Timezones
 
 ** Modifications du fuseaux horaires
+
 ```
 [user@localhost ~]$ sudo timedatectl set-timezone Europe/Berlin
 [user@localhost ~]$ sudo timedatectl
-               Local time: Fri 2019-11-29 16:19:15 CET
-	                  Universal time: Fri 2019-11-29 15:19:15 UTC
-			                   RTC time: Fri 2019-11-29 15:19:14
-					                   Time zone: Europe/Berlin (CET, +0100)
-							   System clock synchronized: yes
-							                 NTP service: active
-									           RTC in local TZ: no
-										  ```
+Local time: Fri 2019-11-29 16:19:15 CET
+Universal time: Fri 2019-11-29 15:19:15 UTC
+RTC time: Fri 2019-11-29 15:19:14
+    Time zone: Europe/Berlin (CET, +0100)
+    System clock synchronized: yes
+    NTP service: active
+    RTC in local TZ: no					   
+```
