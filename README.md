@@ -64,3 +64,15 @@ RTC time: Fri 2019-11-29 15:27:32
     NTP service: inactive
     RTC in local TZ: no	      
 ```
+
+### Gestion des noms
+
+* Expliquer la différence entre --static --transient --pretty
+  * --transient set un transient name qui est le nom de l'hote maintenus par le kernel
+  * --static set le nom de l'hote basique qu'habituellemnt l'utilisateur peux choisir
+  * --pretty est une option qui combiner à une des deux précédentes permet de nettoyer le hostname en enlevant les caractère non UTF-8 et remplaçant les espaces par des "-"
+
+Pour des machines de prod, on peut utiliser le "--pretty" et le "--static". Cela permet d'avoir un hostname propre avec que des caractères lisible.
+
+### Gestion du réseaux
+
