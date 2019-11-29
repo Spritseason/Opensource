@@ -76,3 +76,33 @@ Pour des machines de prod, on peut utiliser le "--pretty" et le "--static". Cela
 
 ### Gestion du réseaux
 
+* Pour affiché les infos DHCP récupéré par le NetworkManager sur une interface disposant d'un DHCP est la suivante :
+
+```
+[user@localhost ~]$ sudo nmcli -f DHCP4 con show enp0s8
+DHCP4.OPTION[1]:                        dhcp_lease_time = 1200
+DHCP4.OPTION[2]:                        dhcp_rebinding_time = 1050
+DHCP4.OPTION[3]:                        dhcp_renewal_time = 600
+DHCP4.OPTION[4]:                        dhcp_server_identifier = 10.0.0.100
+DHCP4.OPTION[5]:                        expiry = 1575044792
+DHCP4.OPTION[6]:                        ip_address = 10.0.0.104
+DHCP4.OPTION[7]:                        requested_broadcast_address = 1
+DHCP4.OPTION[8]:                        requested_dhcp_server_identifier = 1
+DHCP4.OPTION[9]:                        requested_domain_name = 1
+DHCP4.OPTION[10]:                       requested_domain_name_servers = 1
+DHCP4.OPTION[11]:                       requested_domain_search = 1
+DHCP4.OPTION[12]:                       requested_host_name = 1
+DHCP4.OPTION[13]:                       requested_interface_mtu = 1
+DHCP4.OPTION[14]:                       requested_ms_classless_static_routes = 1
+DHCP4.OPTION[15]:                       requested_nis_domain = 1
+DHCP4.OPTION[16]:                       requested_nis_servers = 1
+DHCP4.OPTION[17]:                       requested_ntp_servers = 1
+DHCP4.OPTION[18]:                       requested_rfc3442_classless_static_routes = 1
+DHCP4.OPTION[19]:                       requested_root_path = 1
+DHCP4.OPTION[20]:                       requested_routers = 1
+DHCP4.OPTION[21]:                       requested_static_routes = 1
+DHCP4.OPTION[22]:                       requested_subnet_mask = 1
+DHCP4.OPTION[23]:                       requested_time_offset = 1
+DHCP4.OPTION[24]:                       requested_wpad = 1
+DHCP4.OPTION[25]:                       subnet_mask = 255.255.255.0
+```
