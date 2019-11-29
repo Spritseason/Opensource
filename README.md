@@ -108,3 +108,26 @@ DHCP4.OPTION[23]:                       requested_time_offset = 1
 DHCP4.OPTION[24]:                       requested_wpad = 1
 DHCP4.OPTION[25]:                       subnet_mask = 255.255.255.0
 ```
+
+#### Systemd-networkd
+
+Yes enfin !!
+
+```
+[user@localhost ~]$ sudo systemctl disable NetworkManager
+[sudo] password for user:
+Removed /etc/systemd/system/multi-user.target.wants/NetworkManager.service.
+Removed /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service.
+Removed /etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service.
+[user@localhost ~]$ sudo systemctl stop NetworkManager
+```
+
+Et maintenant une nouvelle ère commence ! :)
+
+```
+[user@localhost ~]$ sudo systemctl enable --now systemd-networkd.service
+Created symlink /etc/systemd/system/dbus-org.freedesktop.network1.service → /usr/lib/systemd/system/systemd-networkd.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/systemd-networkd.service → /usr/lib/systemd/system/systemd-networkd.service.
+Created symlink /etc/systemd/system/sockets.target.wants/systemd-networkd.socket → /usr/lib/systemd/system/systemd-networkd.socket.
+Created symlink /etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service → /usr/lib/systemd/system/systemd-networkd-wait-online.service.
+```
