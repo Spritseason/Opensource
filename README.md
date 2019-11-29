@@ -21,15 +21,15 @@ On remarque alors la ligne de PID 1 avec comme utilisateur "root" et processus "
 
 * Determiné la différence entre Local Time, Universal Time et , RTC Time
 
-** Le *Local Time* est l'heure actuel du systeme
+  * Le *Local Time* est l'heure actuel du systeme
 
-** L'universal Time est un standard de temps basé sur les rotation de la Terre
+  * L'universal Time est un standard de temps basé sur les rotation de la Terre
 
-** le RTC Time est un module de la carte mère auto-alimenter permettant de conserver l'heure.
+  * le RTC Time est un module de la carte mère auto-alimenter permettant de conserver l'heure.
 
 * Timezones
 
-** Modifications du fuseaux horaires
+  * Modifications du fuseaux horaires
 
 ```
 [user@localhost ~]$ sudo timedatectl set-timezone Europe/Berlin
