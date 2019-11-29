@@ -42,3 +42,25 @@ RTC time: Fri 2019-11-29 15:19:14
     NTP service: active
     RTC in local TZ: no					   
 ```
+
+* Utilisation NTP et désactivation du service ntp
+
+```
+[user@localhost ~]$ sudo timedatectl
+Local time: Fri 2019-11-29 16:19:15 CET
+Universal time: Fri 2019-11-29 15:19:15 UTC
+RTC time: Fri 2019-11-29 15:19:14
+    Time zone: Europe/Berlin (CET, +0100)
+     System clock synchronized: yes
+     NTP service: active
+     RTC in local TZ: no
+[user@localhost ~]$ sudo timedatectl set-ntp FALSE
+[user@localhost ~]$ sudo timedatectl
+Local time: Fri 2019-11-29 16:27:33 CET
+Universal time: Fri 2019-11-29 15:27:33 UTC
+RTC time: Fri 2019-11-29 15:27:32
+    Time zone: Europe/Berlin (CET, +0100)
+    System clock synchronized: yes
+    NTP service: inactive
+    RTC in local TZ: no	      
+```
